@@ -129,9 +129,6 @@ Registers a new workflow graph.
 **Response:**
 { "graph_id": "<uuid>" }
 
-yaml
-Copy code
-
 ---
 
 ### ▶ POST `/graph/run`
