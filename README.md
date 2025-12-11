@@ -81,8 +81,6 @@ Each tool is asynchronous and updates the shared state.
 }
 }
 
-shell
-Copy code
 
 ### Initial State Example
 {
@@ -90,9 +88,6 @@ Copy code
 "chunk_size": 500,
 "target_length": 300
 }
-
-yaml
-Copy code
 
 ---
 
@@ -106,9 +101,6 @@ Load Graph → Load Initial State
 → Loop / Branch / Next Node
 → Repeat Until No Further Nodes
 → Mark Run Completed
-
-markdown
-Copy code
 
 ### Features
 - **Async node execution** (with retries + timeout per node)
@@ -132,8 +124,7 @@ Registers a new workflow graph.
 "nodes": { ... }
 }
 
-makefile
-Copy code
+
 
 **Response:**
 { "graph_id": "<uuid>" }
@@ -153,9 +144,6 @@ Runs a workflow (foreground or background).
 "background": false
 }
 
-arduino
-Copy code
-
 Returns final state + logs.
 
 **Background run:**
@@ -165,14 +153,8 @@ Returns final state + logs.
 "background": true
 }
 
-makefile
-Copy code
-
 Returns:
 { "run_id": "<uuid>" }
-
-yaml
-Copy code
 
 ---
 
@@ -191,15 +173,9 @@ Streams logs like:
 
 { "node": "summarize", "result": {...} }
 
-makefile
-Copy code
-
 Final:
 
 { "done": true }
-
-yaml
-Copy code
 
 ---
 
@@ -223,9 +199,6 @@ Run the helper script:
 
 ./tests/quick_run.sh
 
-yaml
-Copy code
-
 It will:
 - Upload the summarization graph  
 - Run the workflow  
@@ -238,17 +211,11 @@ It will:
 ### Build and start:
 docker-compose up --build -d
 
-bash
-Copy code
-
 ### Visit API docs:
 http://localhost:8000/docs
 
 ### Stop:
 docker-compose down
-
-yaml
-Copy code
 
 ---
 
